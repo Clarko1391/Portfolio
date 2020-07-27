@@ -16,20 +16,20 @@
         <div id="portraitBox"><img src="./img/portrait.png" alt="its me" id="portrait" height="150px" width="135px"></div>
             <div id="intro"><p>I'm <strong> Clark Oake </strong> <br> Welcome to my website!</p></div>
             <div id="navIcons">
-                <div id="navBox"><a href="https://github.com/Clarko1391" target="_blank"><img src="./img/github.png" alt="Github" id="navIcon" width="30px" height="30px"></a></div>
-                <div id="navBox"><a href="https://www.linkedin.com/in/clark-oake-483954112/" target="_blank"><img src="./img/linkedin.png" alt="Linkedin" id="navIcon" width="30px" height="30px"></a></div>
-                <div id="navBox"><a href="https://stackoverflow.com/users/13834460/clark-oake" target="_blank"><img src="./img/stackoverflow.png" alt="Stackoverflow" id="navIcon" width="30px" height="30px"></a></div>
+                <div class="navBox"><a href="https://github.com/Clarko1391" target="_blank"><img src="./img/github.png" alt="Github" id="navIcon" width="30px" height="30px"></a></div>
+                <div class="navBox"><a href="https://www.linkedin.com/in/clark-oake-483954112/" target="_blank"><img src="./img/linkedin.png" alt="Linkedin" id="navIcon" width="30px" height="30px"></a></div>
+                <div class="navBox"><a href="https://stackoverflow.com/users/13834460/clark-oake" target="_blank"><img src="./img/stackoverflow.png" alt="Stackoverflow" id="navIcon" width="30px" height="30px"></a></div>
             </div>
             <div id="navLinks">
                 <ul>
-                    <li><button id="link">ABOUT ME</button></li>
-                    <li><button id="link">PROJECTS</button></li>
-                    <li><button id="link">EXPERIENCE</button></li>
-                    <li><button id="link">SKILLS</button></li>
-                    <li><button id="link">EDUCATION</button></li>
-                    <li><button id="link">RESUME</button></li>
-                    <li><button id="link">HOBBIES</button></li>
-                    <li><button id="link">CONTACT</button></li>
+                    <li><button class="link">ABOUT ME</button></li>
+                    <li><button class="link">PROJECTS</button></li>
+                    <li><button class="link">EXPERIENCE</button></li>
+                    <li><button class="link">SKILLS</button></li>
+                    <li><button class="link">EDUCATION</button></li>
+                    <li><button class="link">RESUME</button></li>
+                    <li><button class="link">HOBBIES</button></li>
+                    <li><button class="link">CONTACT</button></li>
                 </ul>
             </div>
         </div>
@@ -100,45 +100,46 @@
             <section id="experience">
                 <div class="sectionWrapper">
                     <div class="timelineBox">
-                        <div class="timelineArrow"><img src="./img/timelinearrow.png" alt="timelineArrow"></div>
-                        <div class="expBox">
-                            <div class="date"><h4>Current</h4></div>
-                            <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
-                            <div class="expContent">
-                                <h4><strong>Get Coding NL</strong>     |     Student of Coaching Program</h4>
-                                <p>Working with professionals from the programming industry to develop skills and start a career as a software developer <br>
-                                    HTML / CSS / JS</p>
+                        <div class="expWrapper">
+                            <div class="expBox topBox">
+                                <div class="date"><h4>Current</h4></div>
+                                <div class="arrow"><img id="expArrow" src="./img/timelinearrow.png" alt="timelineArrow" height="900px" width="30px"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
+                                <div class="expContent">
+                                    <h4><strong>Get Coding NL</strong>     |     Student of Coaching Program</h4>
+                                    <p>Working with professionals from the programming industry to develop skills and start a career as a software developer <br>
+                                        HTML / CSS / JS</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="expBox">
-                            <div class="date"><h4>2017 - 2020</h4></div>
-                            <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
-                            <div class="expContent">
-                                <h4><strong>Schlumberger Canada</strong>      |     Field Electronics Technician</h4>
-                                <p>Maintenance and repair of electronics control and monitoring systems onboard heavy duty industrial machinery <br>
-                                    Field diagnostic and repair of DCS, RDA and other electrical/electronic systems in time sensitive situations <br>
-                                    Working with Certified Mechanics to diagnose and repair mechanical faults in industrial diesel engines and industrial systems</p>
+                            <div class="expBox">
+                                <div class="date"><h4>2017 - 2020</h4></div>
+                                <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
+                                <div class="expContent">
+                                    <h4><strong>Schlumberger Canada</strong>      |     Field Electronics Technician</h4>
+                                    <p>Maintenance and repair of electronics control and monitoring systems onboard heavy duty industrial machinery <br>
+                                        Field diagnostic and repair of DCS, RDA and other electrical/electronic systems in time sensitive situations <br>
+                                        Working with Certified Mechanics to diagnose and repair mechanical faults in industrial diesel engines and industrial systems</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="expBox">
-                            <div class="date"><h4>2016 - 2017</h4></div>
-                            <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
-                            <div class="expContent">
-                                <h4><strong>Marine Industrial Lighting Systems</strong>      |     Electrical Design Technologist</h4>
-                                <p>Design and prototyping of retrofit kits for existing marine lighting installations <br>
-                                    3D modelling (Solidworks, Fusion 360) <br>
-                                    Writing Technical Documents such as specification sheets and installation manuals <br>
-                                    3D printing components to build prototype products for testing and demonstrations</p>
+                            <div class="expBox">
+                                <div class="date"><h4>2016 - 2017</h4></div>
+                                <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
+                                <div class="expContent">
+                                    <h4><strong>Marine Industrial Lighting Systems</strong>      |     Electrical Design Technologist</h4>
+                                    <p>Design and prototyping of retrofit kits for existing marine lighting installations <br>
+                                        3D modelling (Solidworks, Fusion 360) <br>
+                                        Writing Technical Documents such as specification sheets and installation manuals <br>
+                                        3D printing components to build prototype products for testing and demonstrations</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="expBox">
-                            <div class="date"><h4>2015 - 2016 </h4> <h4>(Work Term)</h4></div>
-                            <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
-                            <div class="expContent">
-                                <h4><strong>ControlPro Distributors</strong>      |     Controls Fabrication Technician</h4>
-                                <p>Assemble and function test industrial control panels from As-Built drawings <br>
-                                    Assist in the design of control systems and HMI/PLC interface designs <br>
-                                    Travel to worksites under supervision to diagnose and repair industrial controls for systems such as lighting, HVAC and custom control solutions</p>
+                            <div class="expBox">
+                                <div class="date"><h4>2015 - 2016 </h4> <h4>(Work Term)</h4></div>
+                                <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
+                                <div class="expContent">
+                                    <h4><strong>ControlPro Distributors</strong>      |     Controls Fabrication Technician</h4>
+                                    <p>Assemble and function test industrial control panels from As-Built drawings <br>
+                                        Assist in the design of control systems and HMI/PLC interface designs <br>
+                                        Travel to worksites under supervision to diagnose and repair industrial controls for systems such as lighting, HVAC and custom control solutions</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -150,25 +151,25 @@
             <section id="skills">
                 <div class="sectionWrapper">
                     <div class="gridBox" id="skill">
-                        <div id="skillBox">
-                            <div id="skillIcons"></div>
-                            <div id="skillTitle"><h4>Design</h4></div>
-                            <div id="skillContent"><p>2D Drafting - AutoCAD <br> 3D Drafting - Fusion360 / Solidworks <br> Circuit & Controls Design <br> Web Design - Figma</p></div>
+                        <div class="skillBox">
+                            <div class="skillIcons"><img src="./img/Skills1.png" alt="Design" class="skillIcon"><img src="./img/Skills4.png" alt="Design2" class="skillIcon"></div>
+                            <div><h4 class="skillTitle">Design</h4></div>
+                            <div class="skillContent"><p>2D Drafting - AutoCAD <br> 3D Drafting - Fusion360 / Solidworks <br> Circuit & Controls Design <br> Web Design - Figma</p></div>
                         </div>
-                        <div id="skillBox">
-                            <div id="skillIcons"></div>
-                            <div id="skillTitle"><h4>Implementation</h4></div>
-                            <div id="skillContent"><p>3D Printing <br> Soldering / Connector Assembly <br> Wood Construction <br> Electrical Assembly/Installation <br> Mechanical/Hydraulic Rebuilds <br> Commissioning </p></div>
+                        <div class="skillBox">
+                            <div class="skillIcons"><img src="./img/Skills2.png" alt="Implementation" class="skillIcon"></div>
+                            <div><h4 class="skillTitle">Implementation</h4></div>
+                            <div class="skillContent"><p>3D Printing <br> Soldering / Connector Assembly <br> Wood Construction <br> Electrical Assembly/Installation <br> Mechanical/Hydraulic Rebuilds <br> Commissioning </p></div>
                         </div>
-                        <div id="skillBox">
-                            <div id="skillIcons"></div>
-                            <div id="skillTitle"><h4>Diagnostics</h4></div>
-                            <div id="skillContent"><p>Troubleshooting <br> Failure Analysis <br> Proficient with DMM and Process Calibrator for Testing <br> Proprietary Diagnostic Software (CatET, Cummins Insite, etc.) <br> Signal Analysis</p></div>
+                        <div class="skillBox">
+                            <div class="skillIcons"><img src="./img/Skills3.png" alt="Diagnostics" class="skillIcon"></div>
+                            <div><h4 class="skillTitle">Diagnostics</h4></div>
+                            <div class="skillContent"><p>Troubleshooting <br> Failure Analysis <br> Proficient with DMM and Process Calibrator for Testing <br> Proprietary Diagnostic Software (CatET, Cummins Insite, etc.) <br> Signal Analysis</p></div>
                         </div>
-                        <div id="skillBox">
-                            <div id="skillIcons"></div>
-                            <div id="skillTitle"><h4>Development</h4></div>
-                            <div id="skillContent"><p>HTML5 <br> CSS3 <br> Vanilla Javascript</p></div>
+                        <div class="skillBox">
+                            <div class="skillIcons"><img src="./img/Skills4-1.png" alt="HTML" class="skillIcon"><img src="./img/Skills4-2.png" alt="CSS" class="skillIcon"><img src="./img/Skills4-3.png" alt="JSS" class="skillIcon"></div>
+                            <div><h4 class="skillTitle">Development</h4></div>
+                            <div class="skillContent"><p>HTML5 <br> CSS3 <br> Vanilla Javascript</p></div>
                         </div>
                     </div>
                 </div>
@@ -178,22 +179,24 @@
             <div class="sectionTitle"><h2>Education</h2></div>
             <section id="education">
                 <div class="sectionWrapper">
-                    <div class="timelineBox"></div>
-                    <div class="timelineArrow"><img src="./img/timelinearrowshort.png" alt="timelineArrow"></div>
-                    <div class="expBox">
-                        <div class="date"><h4>2018-2019</h4></div>
-                        <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
-                        <div class="expContent">
-                            <h4><strong>Schlumberger Training Center</strong>     |     Electronic Technician School (Level 1 & Lvel 2)</h4>
-                            <p>Proprietary 1 month training for Schlumberger systems and quality standards hosted in Kellyville, OK at a corporate training facility <br> Achieved top of class in both programs (both were classes of 10+ SLB technicians from all over North America)</p>
-                        </div>
-                    </div>
-                    <div class="expBox">
-                        <div class="date"><h4>2012-2016</h4></div>
-                        <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
-                        <div class="expContent">
-                            <h4><Strong>College of the North Atlantic</Strong>     |     Electrical Engineering Technology (Power & Controls Co-Op)</h4>
-                            <p>Overall GPA of 3.65 <br> RBC Cabot 500 Achievement Award <br> Stantec Community Award <br> Student Representatives Council Appreciation Award</p>
+                    <div class="timelineBox">
+                        <div class="eduWrapper">
+                            <div class="expBox">
+                                <div class="date"><h4>2018-2019</h4></div>
+                                <div class="arrow"><img id="eduArrow" src="./img/timelinearrow.png" alt="timelineArrow" height="450px" width="30px"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
+                                <div class="expContent">
+                                    <h4><strong>Schlumberger Training Center</strong>     |     Electronic Technician School (Level 1 & Level 2)</h4>
+                                    <p>Proprietary 1 month training for Schlumberger systems and quality standards hosted in Kellyville, OK at a corporate training facility <br> Achieved top of class in both programs (both were classes of 10+ SLB technicians from all over North America)</p>
+                                </div>
+                            </div>
+                            <div class="expBox">
+                                <div class="date"><h4>2012-2016</h4></div>
+                                <div class="arrow"><img src="./img/arrow.png" alt="entryArrow" height="30px" width="15px"></div>
+                                <div class="expContent">
+                                    <h4><Strong>College of the North Atlantic</Strong>     |     Electrical Engineering Technology (Power & Controls Co-Op)</h4>
+                                    <p>Overall GPA of 3.65 <br> RBC Cabot 500 Achievement Award <br> Stantec Community Award <br> Student Representatives Council Appreciation Award</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,4 +242,4 @@
     </div>
 </div>
 </body>
-</html></html>
+</html>
