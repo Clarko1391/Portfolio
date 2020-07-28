@@ -128,13 +128,12 @@ b {
     width: 150px;
     height: 30px;
     padding: 2px 0px;
-    text-align: left;
+    text-align: center;
 }
 
 button:hover {
     font-size: 1.2em;
 }
-
 
 
 /* Main Section Elements */
@@ -268,6 +267,7 @@ button:hover {
 .projectBox h4 {
     margin: 5px 10px;
     padding: 0px;
+    color: var(--pinktext);
 }
 
 .projectBox p{
@@ -276,49 +276,31 @@ button:hover {
 }
 
 .projectImage {
-    height: 80%;
     width: 100%;
-    min-width: 300px;
+    height: 80%;
     min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.pImg {
-    width: 30vw;
-    height: 20vh;
-    object-fit: cover;
-    float: center;
-}
-/*
+
 #pImg1 {
-    background-image: url(./img/project1.jpg) center no-repeat;
+    background: url('./img/project1.jpg') center no-repeat;
     background-size: cover;
 }
 
 #pImg2 {
-    background-image: url(./img/project2.jpg) center no-repeat;
+    background: url('./img/project2.jpg') center no-repeat;
     background-size: cover;
-    min-height: 200px;
-    min-width: 200px;
 }
 
 #pImg3 {
-    background-image: url(./img/project3.jpg) center no-repeat;
+    background: url('./img/project3.jpg') center no-repeat;
     background-size: cover;
-    min-height: 200px;
-    min-width: 200px;
 }
 
 #pImg4 {
-    background-image: url(./img/project4.jpg) center no-repeat;
+    background: url('./img/project4.jpg') center no-repeat;
     background-size: cover;
-    min-height: 200px;
-    min-width: 200px;
 }
-*/
 
 .timelineBox { 
     margin: 40px 0px; 
@@ -326,6 +308,7 @@ button:hover {
 
 .arrow {
     position: relative;
+    padding-right: 10px;
 }
 
 #expArrow {
@@ -355,6 +338,10 @@ button:hover {
     box-shadow: var(--shadow);
 }
 
+.expBox h4 {
+    font-size: 0.9em;
+}
+
 .topBox {
     position: relative;
 }
@@ -369,6 +356,15 @@ button:hover {
     min-width: 250px;
     width: 80%;
 }
+
+#skill {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
 
 .skillBox {
     background-color: var(--boxbg);
@@ -410,5 +406,24 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
 }
+
+#fm1 {
+    background: url('./img/fm1-fs.jpg') center no-repeat;
+    background-size: cover;
+}
+
+#fm2 {
+    background: url('./img/fm2-fs.jpg') center no-repeat;
+    background-size: cover;
+}
+
+#fm3 {
+    background: url('./img/fm3-fs.jpg') center no-repeat;
+    background-size: cover;
+}
+
+#fm4 {
+    background: url('./img/fm4-fs.jpg') center no-repeat;
+    background-size: cover;
 
 
