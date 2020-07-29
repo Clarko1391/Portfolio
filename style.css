@@ -454,9 +454,10 @@ button:hover {
         width: 100%;
         display: grid;
         grid-template-areas: 
-        "portrait intro intro intro"
-        "navLinks navLinks navLinks navIcons";
+        "portrait portrait intro intro intro intro"
+        "navLinks navLinks navLinks navLinks navLinks navIcons";
         box-sizing: border-box;
+        gap: 0px;
         padding: 10px;
         margin: 0px;
     }
@@ -475,6 +476,14 @@ button:hover {
         text-align: left;
     }
 
+    #intro strong {
+        font-size: 1.4em;
+    }
+
+    #intro p {
+        font-size: 0.8em;
+    }
+
     .largeScreen {
         display: none;
     }
@@ -485,23 +494,44 @@ button:hover {
 
     #navIcons {
         grid-area: navIcons;
+        width: 80px;
+        margin: 0px 15px;
+    }
+
+    .navBox {
+        padding: 0px;
+        margin: 0px 5px;
     }
 
     .navIcon {
         height: 20px;
+        width: 20px;
     }
 
     #navLinks {
         height: 30px;
-        width: fit-content;
+        width: auto;
         grid-area: navLinks;
     }
 
+    .link {
+        width: auto;
+        height: 30px;
+        padding: 2px 0px;
+        margin: 0px 5px;
+        font-size: 0.7em;
+        text-align: center;
+    }
 
-    #navlinks ul {
-        display: inline-block;
+    button:hover {
+        font-size: 0.75em;
+    }
+
+    
+    #navLinks ul {
         flex-direction: row;
-        align-items: center;
+        justify-items: center;
+        height: 30px;
     }
 
     #bottomContainer {
@@ -519,7 +549,7 @@ button:hover {
     
     .wrapper {
         position: relative;
-        top: 150;
+        top: 0;
         left: 0;
         grid-column-start: 1;
         grid-row-start: 2;          
