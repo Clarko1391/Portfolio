@@ -63,9 +63,6 @@ b {
     font-size: 1.5em;
     padding: 0px 5px 0px 0px;
 }
-/* .mainWrapper {
-    
-} */
 
 /* Sidebar Elements */
 #sidebar {
@@ -95,6 +92,14 @@ b {
     margin: 0px;
 }
 
+.smallScreen {
+    display: none;
+}
+
+.largeScreen {
+    display: inline-block;
+}
+
 #navIcons {
     
     height: 35px;
@@ -110,9 +115,6 @@ b {
 
 #navLinks {
     width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
 }
 
 #navLinks ul{
@@ -138,9 +140,9 @@ button:hover {
 
 /* Main Section Elements */
 #main {
+    width: 100%;
     display: grid;
     grid-template-columns: 300px auto;
-    width: 100vw;
 }
 
 .wrapper {
@@ -212,6 +214,8 @@ button:hover {
     background-color: var(--white);
 }
 
+/* About Me */
+
 #aboutMe {
     max-height: 700px;
 }
@@ -244,6 +248,8 @@ button:hover {
     border-radius: 5px;
     box-shadow: var(--shadow);
 }
+
+/* Projects */
 
 .gridBox {
     display: grid;
@@ -301,6 +307,8 @@ button:hover {
     background: url('./img/project4.jpg') center no-repeat;
     background-size: cover;
 }
+
+/* Experience */
 
 .timelineBox { 
     margin: 40px 0px; 
@@ -360,7 +368,7 @@ button:hover {
 #skill {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 15px;
     justify-content: center;
     width: 100%;
 }
@@ -370,6 +378,7 @@ button:hover {
     background-color: var(--boxbg);
     box-shadow: var(--shadow);
     padding: 10px;
+    min-width: 140px;
 }
 
 .skillIcons {
@@ -425,5 +434,157 @@ button:hover {
 #fm4 {
     background: url('./img/fm4-fs.jpg') center no-repeat;
     background-size: cover;
+}
+
+/* Media Queries */
+
+@media(min-width: 660px) and (max-width: 1024px) {
+       
+    #sidebar {
+        width: 100vw;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    } 
+
+    #topContainer {
+        height: 150px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "portrait intro intro intro"
+        "navLinks navLinks navLinks navIcons";
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #portraitBox {
+        grid-area: portrait;
+    }
+
+    #portrait {
+        width: 70px;
+        height: 75px;
+    }
+
+    #intro {
+        grid-area: intro;
+        text-align: left;
+    }
+
+    .largeScreen {
+        display: none;
+    }
+
+    .smallScreen {
+        display: inline-block;
+    }
+
+    #navIcons {
+        grid-area: navIcons;
+    }
+
+    .navIcon {
+        height: 20px;
+    }
+
+    #navLinks {
+        height: 30px;
+        width: fit-content;
+        grid-area: navLinks;
+    }
 
 
+    #navlinks ul {
+        display: inline-block;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #bottomContainer {
+        display: none;
+    }
+    
+
+    #main {
+        grid-template-columns: auto 0px;
+        grid-template-rows: 150px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .wrapper {
+        position: relative;
+        top: 150;
+        left: 0;
+        grid-column-start: 1;
+        grid-row-start: 2;          
+    }
+
+    .bgImage {
+        left: 0;
+    }
+}
+
+/*
+
+#sidebar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#topContainer {
+    height: 65vh;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 30px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#intro {
+    font-size: 1.2em;
+}
+
+#intro p {
+    margin: 0px;
+}
+
+#navIcons {
+    
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBox {
+    margin: 0px 10px;
+}
+
+#navLinks {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#navLinks ul{
+    margin: 0px;
+    padding: 0px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+*/
