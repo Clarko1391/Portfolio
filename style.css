@@ -438,6 +438,8 @@ button:hover {
 
 /* Media Queries */
 
+/* Tablet Size Responsiveness */
+
 @media(min-width: 660px) and (max-width: 1024px) {
        
     #sidebar {
@@ -477,11 +479,11 @@ button:hover {
     }
 
     #intro strong {
-        font-size: 1.4em;
+        font-size: 2.5vw;
     }
 
     #intro p {
-        font-size: 0.8em;
+        font-size: 2vw;
     }
 
     .largeScreen {
@@ -519,7 +521,7 @@ button:hover {
         height: 30px;
         padding: 2px 0px;
         margin: 0px 5px;
-        font-size: 0.7em;
+        font-size: 1.7vw;
         text-align: center;
     }
 
@@ -582,20 +584,215 @@ button:hover {
     .bgImage {
         left: 0;
     }
+    
+    #showcase h1{
+     z-index: -1;
+    }
+
+    .sectionWrapper h3{
+        display: none;
+    }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1300px) {
+/*
+
+*/
+
+/* Skill Boxes Responsiveness */
+
+@media screen and (min-width: 660px) and (max-width: 1300px) {
 
     #skill {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+    }
 }
 
-@media screen and (max-width: 800px) {
+/* Mobile Size Responsiveness */
 
+@media screen and (max-width: 659px) {
+
+/* Skill Boxes Responsiveness on Mobile */        
     #skill {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #sidebar {
+        width: 100vw;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    } 
+
+    #topContainer {
+        height: 100px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "portrait intro intro intro intro"
+        "navLinks blank blank navIcons navIcons";
+        box-sizing: border-box;
+        gap: 0px;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #portraitBox {
+        grid-area: portrait;
+        width: 55px;
+    }
+
+    #portrait {
+        width: 50px;
+        height: 55px;
+    }
+
+    #intro {
+        grid-area: intro;
+        text-align: left;
+    }
+
+    #intro strong {
+        font-size: 2.5vw;
+    }
+    
+    #intro p {
+        font-size: 2vw;
+    }
+    
+    .largeScreen {
+        display: none;
+    }
+    
+    .smallScreen {
+        display: inline-block;
+    }
+
+    #navIcons {
+        grid-area: navIcons;
+        width: 80px;
+        margin: 0px 15px;
+    }
+    
+    .navBox {
+        padding: 0px;
+        margin: 0px 5px;
+    }
+    
+    .navIcon {
+        height: 20px;
+        width: 20px;
+    }
+    
+    #navLinks {
+        height: 20px;
+        width: 20px;
+        background: url('./img/menu.png') center no-repeat;
+        background-size: 20px 20px;
+        grid-area: navLinks;
+    }
+
+    #navLinks ul {
+        display: none;
+    }
+
+    #bottomContainer {
+        display: none;
+    }
+
+    #main {
+        grid-template-columns: auto 0px;
+        grid-template-rows: 100px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .window {
+        height: 4950px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        }
+    
+    #sbBG {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-image: url(./img/sbBG.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    
+    .wrapper {
+        position: relative;
+        grid-column-start: 1;
+        grid-row-start: 2; 
+        top: 150;
+        left: 0;         
+    }
+    
+    .bgImage {
+        left: 0;
+    }
+
+    #showcase h1{
+        z-index: -1;
+    }
+
+    .sectionWrapper h3{
+        display: none;
+    }
+
+    .timelineBox { 
+        margin: 40px 0px; 
+    }
+    
+    .arrow {
+        position: relative;
+        padding-right: 10px;
+    }
+    
+    #expArrow {
+        position: absolute;
+        top: -110px;
+        left: -15px;
+        z-index: 2;
+    }
+    
+    .expWrapper {
+        height: fit-content;
+        max-height: 1100px;
+    }
+
+    #eduArrow {
+        position: absolute;
+        top: -140px;
+        left: -15px;
+        z-index: 2;
+    }
+
+    .eduWrapper {
+        height: fit-content;
+        max-height: 550px;
+    }
+
+}
+
+/* .gridBox Responsiveness */
+
+@media screen and (max-width: 800px) {
+    .gridBox {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
