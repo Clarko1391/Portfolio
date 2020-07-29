@@ -446,7 +446,7 @@ button:hover {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 4;
     } 
 
     #topContainer {
@@ -524,7 +524,7 @@ button:hover {
     }
 
     button:hover {
-        font-size: 0.75em;
+        font-size: 0.7em;
     }
 
     
@@ -547,12 +547,36 @@ button:hover {
         left: 0;
     }
     
-    .wrapper {
-        position: relative;
+    .window {
+        height: 4950px;
+        width: 100%;
+        position: absolute;
         top: 0;
         left: 0;
+        grid-row-start: 1;
         grid-column-start: 1;
-        grid-row-start: 2;          
+        }
+
+    #sbBG {
+        height: 150px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-image: url(./img/sbBG.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    .wrapper {
+        position: relative;
+        grid-column-start: 1;
+        grid-row-start: 2; 
+        top: 150;
+        left: 0;         
     }
 
     .bgImage {
@@ -560,61 +584,18 @@ button:hover {
     }
 }
 
-/*
+@media screen and (min-width: 801px) and (max-width: 1300px) {
 
-#sidebar {
-    width: 300px;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+    #skill {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
 }
 
-#topContainer {
-    height: 65vh;
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 30px 0px;
-    justify-content: space-between;
-    align-items: center;
-}
+@media screen and (max-width: 800px) {
 
-#intro {
-    font-size: 1.2em;
+    #skill {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
-
-#intro p {
-    margin: 0px;
-}
-
-#navIcons {
-    
-    height: 35px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBox {
-    margin: 0px 10px;
-}
-
-#navLinks {
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-#navLinks ul{
-    margin: 0px;
-    padding: 0px;
-    height: 275px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-*/
