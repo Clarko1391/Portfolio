@@ -126,6 +126,10 @@ b {
     justify-content: space-evenly;
 }
 
+#menu #menuIcon {
+    display: none;
+}
+
 .link {
     width: 150px;
     height: 30px;
@@ -217,7 +221,7 @@ button:hover {
 /* About Me */
 
 #aboutMe {
-    max-height: 700px;
+    max-height: fit-content;
 }
 
 #aboutMe p {
@@ -319,17 +323,35 @@ button:hover {
     padding-right: 10px;
 }
 
-#expArrow {
+.arrowHead {
+    width: 30px;
     position: absolute;
-    top: -100px;
     left: -15px;
+    top: -100px;
+}
+
+#expArrow1 {
+    width: 10px;
+    height: 500px;
+    position: absolute;
+    top: -90px;
+    left: -5px;
+    z-index: 2;
+}
+
+#expArrow2 {
+    width: 10px;
+    height: 500px;
+    position: absolute;
+    top: -350px;
+    left: -5px;
     z-index: 2;
 }
 
 .expWrapper {
     height: 850px;
     width: 100%;
-    gap: 10px;
+    gap: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -400,17 +422,28 @@ button:hover {
     color: var(--pinktext);
 }
 
-#eduArrow {
+#eduArrow1 {
+    width: 10px;
+    height: 250px;
     position: absolute;
-    top: -115px;
-    left: -15px;
+    top: -90px;
+    left: -5px;
+    z-index: 2;
+}
+
+#eduArrow2 {
+    width: 10px;
+    height: 250px;
+    position: absolute;
+    top: -120px;
+    left: -5px;
     z-index: 2;
 }
 
 .eduWrapper {
     height: 400px;
     width: 100%;
-    gap: 10px;
+    gap: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -631,11 +664,11 @@ button:hover {
         width: 100%;
         display: grid;
         grid-template-areas: 
-        "portrait intro intro intro intro"
-        "navLinks blank blank navIcons navIcons";
+        "portrait intro intro"
+        "navIcons blank1 blank2";
         box-sizing: border-box;
         gap: 0px;
-        padding: 10px;
+        padding: 10px 20px;
         margin: 0px;
     }
 
@@ -655,11 +688,11 @@ button:hover {
     }
 
     #intro strong {
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
     
     #intro p {
-        font-size: 2vw;
+        font-size: 2.25vw;
     }
     
     .largeScreen {
@@ -678,20 +711,21 @@ button:hover {
     
     .navBox {
         padding: 0px;
-        margin: 0px 5px;
+        margin: 0px 10px;
     }
     
     .navIcon {
         height: 20px;
         width: 20px;
     }
+
+    #menu #menuIcon {
+        display: inline-block;
+        margin: 0px 10px;
+    }
     
     #navLinks {
-        height: 20px;
-        width: 20px;
-        background: url('./img/menu.png') center no-repeat;
-        background-size: 20px 20px;
-        grid-area: navLinks;
+        display: none;
     }
 
     #navLinks ul {
@@ -763,11 +797,12 @@ button:hover {
         padding-right: 10px;
     }
     
-    #expArrow {
-        position: absolute;
-        top: -110px;
-        left: -15px;
-        z-index: 2;
+    #expArrow1 {
+        height: 750px;
+    }
+    
+    #expArrow2 {
+        top: -320px;
     }
     
     .expWrapper {
@@ -775,11 +810,22 @@ button:hover {
         max-height: 1100px;
     }
 
-    #eduArrow {
-        position: absolute;
-        top: -140px;
-        left: -15px;
-        z-index: 2;
+    #eduArrow1 {
+        height: 500px;
+    }
+    
+    #eduArrow1 {
+        height: 300px;
+        top: -120px;
+    }
+    
+    #eduArrow2 {
+        height: 300px;
+        top: -150px;
+    }
+
+    #eduArrowHead {
+        top: -130px;
     }
 
     .eduWrapper {
