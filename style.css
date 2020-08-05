@@ -2,20 +2,25 @@
 :root {
     --prim1: #2d283E;
     --prim2: #494949;
-    --white: #ffffff;
+    --white: #eeeeee;
     --black: #000000;
+    --buttontext: #cccccc;
     --bluetext: #1762A7;
     --pinktext: #BC3A80;
     --boxbg: #D1E0ED;
     --scol: rgba(45, 40, 62, 0.5);
     --shadow: 5px 5px 10px var(--scol);
+    --textshadow: -0px -0px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 0px 0px 0 #ccc;
 }
+
+/* -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc; */
 
 /* Global Elements */
 body {
     background-image: linear-gradient(var(--prim1), var(--prim2));
     font-family: helvetica, sans-serif;
     font-size: 16px;
+    line-height: 1.6;
     color: var(--white);
     margin: 0px;
     padding: 0px;
@@ -29,7 +34,7 @@ ul {
 
 button {
     background: transparent;
-    color: var(--white);
+    color: var(--buttontext);
     font-size: 1em;
     border: 0px;
     
@@ -84,8 +89,13 @@ b {
     align-items: center;
 }
 
+#portraitBox {
+    margin: 10px 0px;
+}
+
 #intro {
     font-size: 1.2em;
+    margin: 10px 0px;
 }
 
 #intro p {
@@ -101,12 +111,12 @@ b {
 }
 
 #navIcons {
-    
     height: 35px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 10px 0px;
 }
 
 .navBox {
@@ -115,6 +125,7 @@ b {
 
 #navLinks {
     width: 150px;
+    margin: 10px 0px;
 }
 
 #navLinks ul{
@@ -138,7 +149,13 @@ b {
 }
 
 button:hover {
-    font-size: 1.2em;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#bottomContainer p {
+    font-size: 0.6em;
 }
 
 
@@ -162,7 +179,7 @@ button:hover {
 
 #showcase {
     min-height: 400px;
-    height: 50vh;
+    height: 100vh;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -176,13 +193,16 @@ button:hover {
     min-width: 400px;
     min-height: 400px;
     width: 100%;
-    height: 50vh;
-    background: url(img/showcase.png) center no-repeat;
-    background-size: cover;    
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.95;
 }
 
 .textWrapper{
-    height: 40vh;
+    height: 95vh;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -191,11 +211,13 @@ button:hover {
 
 #showcase h1{
     z-index: 2;
+    /* text-shadow: var(--textshadow); */
 }
 
 #showcase h2{
     z-index: 2;
     text-align: end;
+    /* text-shadow: var(--textshadow); */
 }
 
 .sectionTitle {
@@ -251,6 +273,12 @@ button:hover {
     margin-bottom: 40px;
     border-radius: 5px;
     box-shadow: var(--shadow);
+}
+
+#recruitMe:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /* Projects */
@@ -559,7 +587,8 @@ button:hover {
     }
 
     button:hover {
-        font-size: 1.7vw;
+        transform: translateX(3px);
+        
     }
 
     
@@ -664,8 +693,8 @@ button:hover {
         width: 100%;
         display: grid;
         grid-template-areas: 
-        "portrait intro intro"
-        "navIcons blank1 blank2";
+        "portrait intro intro intro intro"
+        "navIcons navIcons blank1 blank2 blank3";
         box-sizing: border-box;
         gap: 0px;
         padding: 10px 20px;
@@ -675,6 +704,7 @@ button:hover {
     #portraitBox {
         grid-area: portrait;
         width: 55px;
+        margin: 0px;
     }
 
     #portrait {
@@ -685,6 +715,7 @@ button:hover {
     #intro {
         grid-area: intro;
         text-align: left;
+        margin: 0px;
     }
 
     #intro strong {
@@ -693,6 +724,7 @@ button:hover {
     
     #intro p {
         font-size: 2.25vw;
+        line-height: 1.2;
     }
     
     .largeScreen {
