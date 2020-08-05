@@ -8,7 +8,7 @@
     --bluetext: #1762A7;
     --pinktext: #BC3A80;
     --boxbg: #D1E0ED;
-    --scol: rgba(45, 40, 62, 0.5);
+    --scol: rgba(45, 40, 62, 0.2);
     --shadow: 5px 5px 10px var(--scol);
     --textshadow: -0px -0px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 0px 0px 0 #ccc;
 }
