@@ -257,6 +257,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin: 30px 0px;
+    height: fit-content;
 }
 
 .sectionWrapper h3{
@@ -343,8 +344,11 @@ button:hover {
 /* Experience */
 
 .timelineBox { 
+    width: 100%;
     margin: 40px 0px; 
     height: fit-content;
+    overflow-y: hidden;
+    padding: 40px 20px 20px;
 }
 
 .arrow {
@@ -356,14 +360,14 @@ button:hover {
     width: 30px;
     position: absolute;
     left: -15px;
-    top: -100px;
+    top: -85px;
 }
 
 #expArrow1 {
     width: 10px;
-    height: 500px;
+    height: 750px;
     position: absolute;
-    top: -90px;
+    top: -80px;
     left: -5px;
     z-index: 2;
 }
@@ -372,13 +376,13 @@ button:hover {
     width: 10px;
     height: 500px;
     position: absolute;
-    top: -380px;
+    top: -340px;
     left: -5px;
     z-index: 2;
 }
 
 .expWrapper {
-    height: 850px;
+    height: fit-content;
     width: 100%;
     gap: 30px;
     display: flex;
@@ -388,7 +392,7 @@ button:hover {
 
 .expBox {
     width: 100%;
-    max-height: 300px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -412,7 +416,6 @@ button:hover {
 }
 
 .expContent {
-    min-width: 250px;
     width: 80%;
 }
 
@@ -451,11 +454,15 @@ button:hover {
     color: var(--pinktext);
 }
 
+#eduArrowHead {
+    top: -80px;
+}
+
 #eduArrow1 {
     width: 10px;
     height: 250px;
     position: absolute;
-    top: -90px;
+    top: -70px;
     left: -5px;
     z-index: 2;
 }
@@ -464,13 +471,13 @@ button:hover {
     width: 10px;
     height: 250px;
     position: absolute;
-    top: -130px;
+    top: -100px;
     left: -5px;
     z-index: 2;
 }
 
 .eduWrapper {
-    height: 400px;
+    height: fit-content;
     width: 100%;
     gap: 30px;
     display: flex;
@@ -655,6 +662,15 @@ button:hover {
     .sectionWrapper h3{
         display: none;
     }
+
+    #eduArrowHead {
+        top: -80px;
+    }
+
+    #eduArrow1 {
+        top: -70px;
+
+    }
 }
 
 /*
@@ -822,25 +838,31 @@ button:hover {
     }
 
     .timelineBox { 
-        margin: 40px 0px; 
+        margin: 40px 0px;
+        height: fit-content; 
     }
     
     .arrow {
         position: relative;
         padding-right: 10px;
     }
+
+    #expArrowHead {
+        top: -130px;
+    }
     
     #expArrow1 {
-        height: 750px;
+        height: 1200px;
+        top: -120px;
     }
     
     #expArrow2 {
+        height: 1000px;
         top: -330px;
     }
     
     .expWrapper {
         height: fit-content;
-        max-height: 1100px;
     }
 
     #eduArrow1 {
@@ -848,22 +870,21 @@ button:hover {
     }
     
     #eduArrow1 {
-        height: 300px;
-        top: -120px;
+        height: 350px;
+        top: -140px;
     }
     
     #eduArrow2 {
-        height: 300px;
+        height: 450px;
         top: -165px;
     }
 
     #eduArrowHead {
-        top: -130px;
+        top: -150px;
     }
 
     .eduWrapper {
         height: fit-content;
-        max-height: 550px;
     }  
 
 }
@@ -873,5 +894,13 @@ button:hover {
 @media screen and (max-width: 800px) {
     .gridBox {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Sidebar height fix */
+
+@media screen and (max-height: 620px) {
+    #bottomContainer {
+        display: none;
     }
 }
