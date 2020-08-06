@@ -1,0 +1,1 @@
+const aboutMeBtn = document.getElementById('aboutMeButton');
