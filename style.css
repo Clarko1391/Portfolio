@@ -119,6 +119,18 @@ b {
     margin: 10px 0px;
 }
 
+#menuIcon:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navIcon:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 .navBox {
     margin: 0px 10px;
 }
@@ -664,11 +676,11 @@ button:hover {
     }
 
     #eduArrowHead {
-        top: -80px;
+        top: -110px;
     }
 
     #eduArrow1 {
-        top: -70px;
+        top: -100px;
 
     }
 }
@@ -848,12 +860,12 @@ button:hover {
     }
 
     #expArrowHead {
-        top: -130px;
+        top: -110px;
     }
     
     #expArrow1 {
         height: 1200px;
-        top: -120px;
+        top: -100px;
     }
     
     #expArrow2 {
@@ -864,14 +876,10 @@ button:hover {
     .expWrapper {
         height: fit-content;
     }
-
-    #eduArrow1 {
-        height: 500px;
-    }
-    
+   
     #eduArrow1 {
         height: 350px;
-        top: -140px;
+        top: -100px;
     }
     
     #eduArrow2 {
@@ -880,7 +888,7 @@ button:hover {
     }
 
     #eduArrowHead {
-        top: -150px;
+        top: -110px;
     }
 
     .eduWrapper {
@@ -902,5 +910,17 @@ button:hover {
 @media screen and (max-height: 620px) {
     #bottomContainer {
         display: none;
+    }
+}
+
+/* eduArrow tablet size fix */
+
+@media screen and (min-width: 700px) and (max-width: 1030px) {
+    #eduArrow1 {
+        top: -70px;
+    }
+
+    #eduArrowHead {
+        top: -80px;
     }
 }
