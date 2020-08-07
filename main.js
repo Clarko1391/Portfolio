@@ -28,14 +28,14 @@ hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
 function smoothScroll(target, duration) {
     let targetPosition = target.getBoundingClientRect().top;
     let startPosition = window.pageYOffset;
-    let distance = targetPosition - startPosition;
     let startTime = null;
+    checkMedia();
 
 
     function animation(currentTime) {
         if(startTime === null) startTime  = currentTime;
         let timeElapsed = currentTime - startTime;
-        let run = ease(timeElapsed, startPosition, distance, duration);
+        let run = ease(timeElapsed, startPosition, targetPosition, duration);
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
     }
@@ -47,8 +47,13 @@ function smoothScroll(target, duration) {
         return -c / 2 * (t * (t - 2) - 1) + b;
     }
 
-    requestAnimationFrame(animation);
+    function checkMedia(targetPosition) {
+    let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
+    let mobile = window.matchMedia("(max-width: 659px)");
+    // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)
+    if(tablet.matches) {targetPosition = (targetPosition - 150)}
+    if(mobile.matches) {targetPosition = (targetPosition - 100)}
+    }
 
-    console.log(targetPosition);
-    console.log(startPosition);
+    requestAnimationFrame(animation);
 }
