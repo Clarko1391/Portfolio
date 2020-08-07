@@ -1,4 +1,5 @@
 // Selectors
+// Nav Link Buttons
 const aboutMeBtn = document.getElementById('aboutMeButton');
 const aboutMe = document.getElementById('aMHeader');
 const projectsBtn = document.getElementById('projectsButton');
@@ -14,6 +15,8 @@ const resume = document.getElementById('resumeHeader');
 const hobbiesBtn = document.getElementById('hobbiesButton');
 const hobbies = document.getElementById('hobbiesHeader');
 const contactBtn = document.getElementById('contactButton');
+const menuBtn = document.getElementById('menu');
+const navLinks = document.getElementById('navLinks');
 
 // Event Listeners
 aboutMeBtn.addEventListener('click', function() {smoothScroll(aboutMe, 1500)});
@@ -23,6 +26,7 @@ skillsBtn.addEventListener('click', function() {smoothScroll(skills, 1500)});
 educationBtn.addEventListener('click', function() {smoothScroll(education, 1500)});
 resumeBtn.addEventListener('click', function() {smoothScroll(resume, 1500)});
 hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
+menuBtn.addEventListener('click', function () {hamburgerMenu});
 
 // Functions
 function smoothScroll(target, duration) {
@@ -30,6 +34,19 @@ function smoothScroll(target, duration) {
     let startPosition = window.pageYOffset;
     let startTime = null;
     checkMedia();
+    console.log(typeof(startPosition));
+    console.log(targetPosition);
+
+    function checkMedia(targetPosition) {
+        let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
+        let mobile = window.matchMedia("(max-width: 659px)");
+        // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)
+        if (mobile.matches) {targetPosition = (targetPosition - 100)
+        } else if (tablet.matches) {targetPosition = (targetPosition - 150)
+        } else {targetPosition = targetPosition}
+        console.log(targetPosition);
+        console.log(typeof(targetPosition));
+        }
 
 
     function animation(currentTime) {
@@ -47,13 +64,10 @@ function smoothScroll(target, duration) {
         return -c / 2 * (t * (t - 2) - 1) + b;
     }
 
-    function checkMedia(targetPosition) {
-    let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
-    let mobile = window.matchMedia("(max-width: 659px)");
-    // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)
-    if(tablet.matches) {targetPosition = (targetPosition - 150)}
-    if(mobile.matches) {targetPosition = (targetPosition - 100)}
-    }
-
     requestAnimationFrame(animation);
 }
+
+function hamburgerMenu() {
+    navLinks.classList.toggle('navActive');
+}
+
