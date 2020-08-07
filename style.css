@@ -800,6 +800,12 @@ button:hover {
         height: 50vh;
         background-color: #2d283E;
         margin: 0;
+        transform: translateX(100vw);
+        opacity: 0%;
+        /* transition: all 0.5s ease; */
+    }
+
+    #navLinks li{
         display: none;
     }
 
@@ -960,5 +966,7 @@ button:hover {
 
 /* navActive class for sidebar menu toggle */
 .navActive {
-    display: flex;
+    transform: translateX(-100vw);
+    opacity: 100%;
+    transition: all 0.5s ease;
 }

@@ -15,7 +15,8 @@ const resume = document.getElementById('resumeHeader');
 const hobbiesBtn = document.getElementById('hobbiesButton');
 const hobbies = document.getElementById('hobbiesHeader');
 const contactBtn = document.getElementById('contactButton');
-const menuBtn = document.getElementById('menu');
+const menuBtn = document.getElementById('menuIcon');
+// const nav = document.getElementsByClassName('nav');
 const navLinks = document.getElementById('navLinks');
 
 // Event Listeners
@@ -26,7 +27,7 @@ skillsBtn.addEventListener('click', function() {smoothScroll(skills, 1500)});
 educationBtn.addEventListener('click', function() {smoothScroll(education, 1500)});
 resumeBtn.addEventListener('click', function() {smoothScroll(resume, 1500)});
 hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
-menuBtn.addEventListener('click', function () {hamburgerMenu});
+menuBtn.addEventListener('click', function () {navSlide()});
 
 // Functions
 function smoothScroll(target, duration) {
@@ -67,7 +68,8 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
-function hamburgerMenu() {
+function navSlide() {
+    // nav.classList.toggle('navActive');
     navLinks.classList.toggle('navActive');
 }
 
