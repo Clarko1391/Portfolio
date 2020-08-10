@@ -8,8 +8,8 @@
     --bluetext: #1762A7;
     --pinktext: #BC3A80;
     --boxbg: #D1E0ED;
-    --scol: rgba(45, 40, 62, 0.2);
-    --shadow: 5px 5px 10px var(--scol);
+    --scol: rgba(45, 40, 62, 0.3);
+    --shadow: 0px 0px 10px var(--scol);
     --textshadow: -0px -0px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 0px 0px 0 #ccc;
 }
 
@@ -206,7 +206,7 @@ button:hover {
     min-height: 400px;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -221,14 +221,14 @@ button:hover {
     justify-content: space-between;
 }
 
-#showcase h1{
+/* #showcase h1{
     z-index: 2;
-    /* text-shadow: var(--textshadow); */
-}
+    text-shadow: var(--textshadow);
+} */
 
 #showcase h2{
     z-index: 2;
-    text-align: end;
+    text-align: start;
     /* text-shadow: var(--textshadow); */
 }
 
