@@ -652,11 +652,15 @@ button:hover {
         top: 0;
         left: 0;
         z-index: 3;
-        background-image: url(./img/sbBG.png);
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        background-attachment: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        background: transparent;
+    }
+
+    #sbBG::-webkit-scrollbar{
+        display: none;
     }
 
     .wrapper {
@@ -664,7 +668,7 @@ button:hover {
         grid-column-start: 1;
         grid-row-start: 2; 
         top: 0;
-        left: 0;         
+        left: 0;      
     }
 
     #showcase {

@@ -18,6 +18,7 @@ const contactBtn = document.getElementById('contactButton');
 const menuBtn = document.getElementById('menuIcon');
 // const nav = document.getElementsByClassName('nav');
 const navLinks = document.getElementById('navLinks');
+const gradientBG = document.getElementById('gradientBG');
 
 // Event Listeners
 aboutMeBtn.addEventListener('click', function() {smoothScroll(aboutMe, 1500)});
@@ -28,6 +29,7 @@ educationBtn.addEventListener('click', function() {smoothScroll(education, 1500)
 resumeBtn.addEventListener('click', function() {smoothScroll(resume, 1500)});
 hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
 menuBtn.addEventListener('click', function () {navSlide()});
+window.addEventListener('scroll', function(){gradient()});
 
 // Functions
 function smoothScroll(target, duration) {
@@ -76,5 +78,11 @@ function smoothScroll(target, duration) {
 function navSlide() {
     // nav.classList.toggle('navActive');
     navLinks.classList.toggle('navActive');
+}
+
+function gradient() {
+    let gPosition = window.scrollY;
+    gradientBG.scrollTo(gPosition);
+
 }
 
