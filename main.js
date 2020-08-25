@@ -31,26 +31,25 @@ menuBtn.addEventListener('click', function () {navSlide()});
 
 // Functions
 function smoothScroll(target, duration) {
-    let targetPosition = target.getBoundingClientRect().top;
+    let targetPosition = '';
+    x = target.getBoundingClientRect().top;
+    checkMedia(x);
     let startPosition = window.pageYOffset;
     let startTime = null;
-    checkMedia();
-    console.log(typeof(startPosition));
+    console.log(x);
     console.log(targetPosition);
 
-    function checkMedia(targetPosition) {
+    function checkMedia(position) {
         let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
         let mobile = window.matchMedia("(max-width: 659px)");
         // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)
-        if (mobile.matches) 
-            {targetPosition = (targetPosition - 100)
-            } 
-            else if (tablet.matches) 
-            {targetPosition = (targetPosition - 150)
-            } 
-            else {targetPosition = targetPosition}
-        console.log(targetPosition);
-        console.log(typeof(targetPosition));
+        if (mobile.matches) {
+                targetPosition = position - 100;
+            } else if (tablet.matches) {
+                targetPosition = position - 150;
+            } else {
+                targetPosition = position;
+            }
         }
 
 
