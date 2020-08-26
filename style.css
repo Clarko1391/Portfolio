@@ -799,28 +799,30 @@ button:hover {
         display: inline-block;
         margin: 0px 10px;
     }
+
+    /*  */
     
     #navLinks {
         position: absolute;
         top: 100px;
         left: 0px;
-        width: 20vw;
+        width: 25vw;
         height: 50vh;
-        background-color: #2d283E;
+        background-color: #2d283e;
         margin: 0;
-        transform: translateX(100vw);
-        opacity: 0%;
-        /* transition: all 0.5s ease; */
+        transition: all 1s ease;
     }
 
-    #navLinks li{
+    /* #navLinks li{
         display: none;
-    }
+    } */
 
     #navLinks ul {
         height: 100%;
         justify-content: space-around;
     }
+
+    /*  */
 
     .link, button {
         text-align: left;
@@ -862,11 +864,15 @@ button:hover {
         top: 0;
         left: 0;
         z-index: 3;
-        background-image: url(./img/sbBG.png);
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        background-attachment: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        background: transparent;
+    }
+
+    #sbBG::-webkit-scrollbar{
+        display: none;
     }
     
     .wrapper {
@@ -874,7 +880,7 @@ button:hover {
         grid-column-start: 1;
         grid-row-start: 2; 
         top: 150;
-        left: 0;         
+        left: 0;       
     }
 
     #showcase {
@@ -973,8 +979,6 @@ button:hover {
 }
 
 /* navActive class for sidebar menu toggle */
-.navActive {
-    transform: translateX(-100vw);
-    opacity: 100%;
-    transition: all 0.5s ease;
+.navHide {
+    transform: translateY(-100vh);
 }

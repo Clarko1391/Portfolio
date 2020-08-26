@@ -16,7 +16,6 @@ const hobbiesBtn = document.getElementById('hobbiesButton');
 const hobbies = document.getElementById('hobbiesHeader');
 const contactBtn = document.getElementById('contactButton');
 const menuBtn = document.getElementById('menuIcon');
-// const nav = document.getElementsByClassName('nav');
 const navLinks = document.getElementById('navLinks');
 const gradientBG = document.getElementById('gradientBG');
 
@@ -29,7 +28,12 @@ educationBtn.addEventListener('click', function() {smoothScroll(education, 1500)
 resumeBtn.addEventListener('click', function() {smoothScroll(resume, 1500)});
 hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
 menuBtn.addEventListener('click', function () {navSlide()});
-window.addEventListener('scroll', function(){gradient()});
+// window.addEventListener('scroll', function(){gradient()});
+
+// Check media query status for tablet & mobile screen sizes
+let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
+let mobile = window.matchMedia("(max-width: 659px)");
+window.setInterval(function(){checkScreen()}, 50);
 
 // Functions
 function smoothScroll(target, duration) {
@@ -42,13 +46,11 @@ function smoothScroll(target, duration) {
     console.log(targetPosition);
 
     function checkMedia(position) {
-        let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
-        let mobile = window.matchMedia("(max-width: 659px)");
         // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)
         if (mobile.matches) {
-                targetPosition = position - 100;
+                targetPosition = position - 99;
             } else if (tablet.matches) {
-                targetPosition = position - 150;
+                targetPosition = position - 149;
             } else {
                 targetPosition = position;
             }
@@ -75,14 +77,20 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
+function checkScreen() {
+    if (mobile.matches) {
+        navLinks.classList.add('navHide');
+    } else {
+        navLinks.classList.remove('navHide');
+    }
+}
+
 function navSlide() {
-    // nav.classList.toggle('navActive');
-    navLinks.classList.toggle('navActive');
+    navLinks.classList.toggle('navHide');
 }
 
-function gradient() {
-    let gPosition = window.scrollY;
-    gradientBG.scrollTo(gPosition);
-
-}
+// function gradient() {
+//     let gPosition = window.scrollY;
+//     gradientBG.scrollTo(gPosition);
+// }
 
