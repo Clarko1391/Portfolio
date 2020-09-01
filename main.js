@@ -78,11 +78,11 @@ function smoothScroll(target, duration) {
 }
 
 function checkScreen() {
-    if (mobile.matches) {
-        navLinks.classList.add('navHide');
-    } else {
-        navLinks.classList.remove('navHide');
-    }
+    // if (mobile.matches) {
+    //     navLinks.classList.add('navHide');
+    // } else {
+    //     navLinks.classList.remove('navHide');
+    // }
 }
 
 function navSlide() {
