@@ -228,15 +228,9 @@ button:hover {
     justify-content: space-between;
 }
 
-/* #showcase h1{
-    z-index: 2;
-    text-shadow: var(--textshadow);
-} */
-
 #showcase h2{
     z-index: 2;
     text-align: start;
-    /* text-shadow: var(--textshadow); */
 }
 
 .sectionTitle {
@@ -442,6 +436,8 @@ button:hover {
     width: 80%;
 }
 
+/* Skills */
+
 #skill {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -477,6 +473,8 @@ button:hover {
     color: var(--pinktext);
 }
 
+/* Education */
+
 #eduArrowHead {
     top: -80px;
 }
@@ -507,6 +505,33 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
 }
+
+/* Resume */
+#resumeBox {
+    min-width: 400px;
+    width: 100%;
+    height: 100%;
+}
+
+#resumeFrame {
+    width: 100%;
+    height: fit-content;
+    background: var(--boxbg);
+}
+
+#resumeObject {
+    width: 100%;
+    height: 100%;
+    background: var(--boxbg);
+}
+
+#resumeEmbed {
+    width: 100%;
+    height: fit-content;
+    background: var(--boxbg);
+}
+
+/* Hobbies */
 
 #fm1 {
     background: url('./img/fm1-fs.jpg') center no-repeat;
