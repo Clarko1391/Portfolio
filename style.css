@@ -185,6 +185,10 @@ button:hover {
     grid-template-columns: 300px auto;
 }
 
+#gradientBG {
+    display: none;
+}
+
 .wrapper {
     grid-column-start: 2;
     min-width: 400px;
@@ -328,9 +332,7 @@ button:hover {
 }
 
 .projectImage {
-    width: 100%;
-    height: 80%;
-    min-height: 200px;
+    min-height: 250px;
 }
 
 
@@ -536,24 +538,33 @@ button:hover {
 }
 
 /* Hobbies */
+#fMHeaderContainer {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#fMHeader {
+    width: 100%;
+    text-align: left;
+}
 #fm1 {
-    background: url('./img/fm1-fs.jpg') center no-repeat;
-    background-size: cover;
+    background: url('./img/fm1-fs.jpg') top no-repeat;
+    background-size: contain;
 }
 
 #fm2 {
     background: url('./img/fm2-fs.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 #fm3 {
     background: url('./img/fm3-fs.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 #fm4 {
     background: url('./img/fm4-fs.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 /* Media Queries */
@@ -646,11 +657,9 @@ button:hover {
     }
 
     button:hover {
-        transform: translateX(3px);
-        
+        transform: translateX(3px);        
     }
 
-    
     #navLinks ul {
         flex-direction: row;
         justify-items: center;
@@ -661,7 +670,6 @@ button:hover {
         display: none;
     }
     
-
     #main {
         grid-template-columns: auto 0px;
         grid-template-rows: 150px auto;
@@ -692,6 +700,10 @@ button:hover {
         -ms-overflow-style: none;
         scrollbar-width: none;
         background: transparent;
+    }
+
+    #gradientBG {
+        display: initial;
     }
 
     #sbBG::-webkit-scrollbar{
@@ -733,6 +745,11 @@ button:hover {
         top: -100px;
 
     }
+
+    #fMHeader {
+        display: initial;
+    }
+
 }
 
 /*
@@ -839,18 +856,13 @@ button:hover {
     
     #navLinks {
         position: absolute;
-        top: 100px;
+        top: -500px;
         left: 0px;
         width: 25vw;
         height: 50vh;
         background-color: #2d283e;
         margin: 0;
-        transition: all 1s ease;
     }
-
-    /* #navLinks li{
-        display: none;
-    } */
 
     #navLinks ul {
         height: 100%;
@@ -904,6 +916,10 @@ button:hover {
         -ms-overflow-style: none;
         scrollbar-width: none;
         background: transparent;
+    }
+
+    #gradientBG {
+        display: initial;
     }
 
     #sbBG::-webkit-scrollbar{
@@ -983,6 +999,10 @@ button:hover {
         height: fit-content;
     }  
 
+    #fMHeader {
+        display: initial;
+    }
+
 }
 
 /* .gridBox Responsiveness */
@@ -1014,6 +1034,7 @@ button:hover {
 }
 
 /* navActive class for sidebar menu toggle */
-.navHide {
-    transform: translateY(-100vh);
+.navActive {
+    transform: translateY(600px);
+    transition: all 1s ease;
 }

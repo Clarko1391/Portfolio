@@ -33,7 +33,7 @@ menuBtn.addEventListener('click', function () {navSlide()});
 // Check media query status for tablet & mobile screen sizes
 let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
 let mobile = window.matchMedia("(max-width: 659px)");
-window.setInterval(function(){checkScreen()}, 50);
+window.addEventListener('resize', function(){checkScreen()});
 
 // Functions
 function smoothScroll(target, duration) {
@@ -78,15 +78,19 @@ function smoothScroll(target, duration) {
 }
 
 function checkScreen() {
-    // if (mobile.matches) {
-    //     navLinks.classList.add('navHide');
-    // } else {
-    //     navLinks.classList.remove('navHide');
-    // }
+    if (!mobile.matches) {
+        navLinks.classList.remove('navActive');
+    } 
 }
 
 function navSlide() {
-    navLinks.classList.toggle('navHide');
+    // show navLinks menu
+    if (!navLinks.classList.contains('navActive')) {
+        navLinks.classList.add('navActive');
+    // hide navLinks menu
+    } else {
+        navLinks.classList.remove('navActive');
+    }
 }
 
 // function gradient() {
