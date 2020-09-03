@@ -15,8 +15,19 @@ const resume = document.getElementById('resumeHeader');
 const hobbiesBtn = document.getElementById('hobbiesButton');
 const hobbies = document.getElementById('hobbiesHeader');
 const contactBtn = document.getElementById('contactButton');
+const contact = document.getElementById('contactHeader');
 const menuBtn = document.getElementById('menuIcon');
 const navLinks = document.getElementById('navLinks');
+
+// Contact Modal Elements
+const recruitMe = document.getElementById('recruitMe');
+const contactMe = document.getElementById('contactMe');
+const contactModal = document.getElementById('modalBG');
+const modalButton = document.getElementById('modalButton');
+const closeModalButton = document.getElementById('closeModal');
+
+// Gradient effect while sidebar at top of page (not working)
+const windowDiv = document.querySelector('window');
 const gradientBG = document.getElementById('gradientBG');
 
 // Event Listeners
@@ -27,8 +38,13 @@ skillsBtn.addEventListener('click', function() {smoothScroll(skills, 1500)});
 educationBtn.addEventListener('click', function() {smoothScroll(education, 1500)});
 resumeBtn.addEventListener('click', function() {smoothScroll(resume, 1500)});
 hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
+contactBtn.addEventListener('click', function() {smoothScroll(contact, 1500)});
 menuBtn.addEventListener('click', function () {navSlide()});
-// window.addEventListener('scroll', function(){gradient()});
+recruitMe.addEventListener('click', function(){openModal()});
+contactMe.addEventListener('click', function(){openModal()});
+closeModalButton.addEventListener('click', function(){closeModal()});
+
+window.addEventListener('scroll', function(){gradient()});
 
 // Check media query status for tablet & mobile screen sizes
 let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
@@ -42,8 +58,7 @@ function smoothScroll(target, duration) {
     checkMedia(x);
     let startPosition = window.pageYOffset;
     let startTime = null;
-    console.log(x);
-    console.log(targetPosition);
+    checkNavActive();
 
     function checkMedia(position) {
         // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)
@@ -78,9 +93,12 @@ function smoothScroll(target, duration) {
 }
 
 function checkScreen() {
+    
     if (!mobile.matches) {
+    // remove effects from navLinks so they work in other view modes
         navLinks.classList.remove('navActive');
-    } 
+        navLinks.style.removeProperty('transition');
+    }
 }
 
 function navSlide() {
@@ -93,8 +111,25 @@ function navSlide() {
     }
 }
 
-// function gradient() {
-//     let gPosition = window.scrollY;
-//     gradientBG.scrollTo(gPosition);
-// }
+function checkNavActive () {
+    setTimeout(function(){cNA()}, 1250)};
+    function cNA() {
+        if (navLinks.classList.contains('navActive')) {
+            navLinks.classList.remove('navActive');
+    }
+}
+
+function openModal() {
+    contactModal.style.visibility = 'visible';
+    contactModal.style.opacity = 1;    
+}
+
+function closeModal() {
+    contactModal.style.visibility = 'hidden';
+    contactModal.style.opacity = 0;   
+}
+
+function gradient() {
+    console.log(windowDiv.scrollTop);
+}
 
