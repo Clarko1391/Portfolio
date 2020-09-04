@@ -25,6 +25,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 ul {
@@ -186,6 +187,9 @@ button:hover {
 }
 
 #gradientBG {
+    position: absolute;
+    top: 0;
+    left: 100%; 
     display: none;
 }
 
@@ -816,6 +820,9 @@ button:hover {
     }
 
     #gradientBG {
+        position: absolute;
+        top: 0px;
+        left: 0px; 
         display: initial;
     }
 
@@ -1023,13 +1030,16 @@ button:hover {
         z-index: 3;
         overflow-y: scroll;
         overflow-x: hidden;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        /* -ms-overflow-style: none;
+        scrollbar-width: none; */
         background: transparent;
     }
 
     #gradientBG {
-        display: initial;
+        position: relative;
+        top: 0px;
+        left: 0px; 
+        display: initial;    
     }
 
     #sbBG::-webkit-scrollbar{

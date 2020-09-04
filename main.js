@@ -27,7 +27,8 @@ const modalButton = document.getElementById('modalButton');
 const closeModalButton = document.getElementById('closeModal');
 
 // Gradient effect while sidebar at top of page (not working)
-const windowDiv = document.querySelector('window');
+const main = document.getElementById('main');
+const showcase = document.getElementById('showcase');
 const gradientBG = document.getElementById('gradientBG');
 
 // Event Listeners
@@ -130,6 +131,9 @@ function closeModal() {
 }
 
 function gradient() {
-    console.log(windowDiv.scrollTop);
+    let gPosition = document.documentElement.scrollTop;
+    if (mobile.matches || tablet.matches) {
+        gradientBG.style.top = (-gPosition + "px");
+    }
 }
 
