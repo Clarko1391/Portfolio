@@ -222,9 +222,14 @@
             <section id="resume">
                 <div class="sectionWrapper">
                     <div id="resumeBox">
-                        <object id="resumeObject" data="./pdf/clarkOake2020Public.pdf#toolbar=0" type="application/pdf">
+                        <img id="myResume" src="./img/resume.png" alt="My Resume">
+                        <!-- <object id="resumeObject" data="./pdf/clarkOake2020Public.pdf#toolbar=0" type="application/pdf">
                             <embed id="resumeEmbed" src="./pdf/clarkOake2020Public.pdf" type="application/pdf">
-                        </object>
+                        </object> -->
+                        <div id="resumeOverlay">
+                            <button id="resDownload">download PDF</button>
+                            <button id="resFullScreen">View Fullsize</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -284,7 +289,7 @@
             <h2>Send me a message</h2>
             <input class="modalInput" type="text" placeholder="Your name">
             <input class="modalInput" type="text" placeholder="Your email">
-            <input class="modalInput" id="modalMessage" type="text" placeholder="What's up?">
+            <textarea class="modalInput" id="modalMessage" type="text" placeholder="What's up?"></textarea>
             <button id="modalButton">Give me a shout!</button>
             <span id="closeModal">X</span>
         </div>

@@ -44,7 +44,6 @@ menuBtn.addEventListener('click', function () {navSlide()});
 recruitMe.addEventListener('click', function(){openModal()});
 contactMe.addEventListener('click', function(){openModal()});
 closeModalButton.addEventListener('click', function(){closeModal()});
-
 window.addEventListener('scroll', function(){gradient()});
 
 // Check media query status for tablet & mobile screen sizes
@@ -60,6 +59,7 @@ function smoothScroll(target, duration) {
     let startPosition = window.pageYOffset;
     let startTime = null;
     checkNavActive();
+    console.log(targetPosition);
 
     function checkMedia(position) {
         // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)

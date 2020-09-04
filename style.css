@@ -516,12 +516,40 @@ button:hover {
 #resumeBox {
     min-width: 400px;
     width: 100%;
+    height: 100%;
     position: relative;
-    padding-top: 133%;
+    background-color: var(--white);
+    border: 1px solid var(--prim2);
+    box-shadow: var(--shadow);
+}
+
+#myResume {
+    width: 100%;
+    height: 100%;
+}
+
+#resumeOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 73, 73, 0.75);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    display: none;
 }
 
 
-#resumeObject {
+/* #resumeObject {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+} */
+
+/* #resumeEmbed {
     position: absolute;
     top: 0;
     left: 0;
@@ -529,19 +557,7 @@ button:hover {
     right: 0;
     width: 100%;
     height:100%;
-    border-width: 0;;
-}
-
-#resumeEmbed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height:100%;
-    border-width: 0;;
-}
+} */
 
 /* Hobbies */
 #fMHeaderContainer {
@@ -1036,6 +1052,8 @@ button:hover {
     }
 
     #gradientBG {
+        height: 9000px;
+        width: auto;
         position: relative;
         top: 0px;
         left: 0px; 
@@ -1121,6 +1139,10 @@ button:hover {
 
     #fMHeader {
         display: initial;
+    }
+
+    #contactMe {
+        text-align: center;
     }
 
 }
