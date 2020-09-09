@@ -26,7 +26,7 @@ const contactModal = document.getElementById('modalBG');
 const modalButton = document.getElementById('modalButton');
 const closeModalButton = document.getElementById('closeModal');
 
-// Gradient effect while sidebar at top of page (not working)
+// Gradient effect while sidebar at top of page
 const main = document.getElementById('main');
 const showcase = document.getElementById('showcase');
 const gradientBG = document.getElementById('gradientBG');
@@ -45,6 +45,7 @@ recruitMe.addEventListener('click', function(){openModal()});
 contactMe.addEventListener('click', function(){openModal()});
 closeModalButton.addEventListener('click', function(){closeModal()});
 window.addEventListener('scroll', function(){gradient()});
+
 
 // Check media query status for tablet & mobile screen sizes
 let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");

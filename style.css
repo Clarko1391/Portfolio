@@ -8,9 +8,8 @@
     --bluetext: #1762A7;
     --pinktext: #BC3A80;
     --boxbg: #D1E0ED;
-    --scol: rgba(45, 40, 62, 0.3);
-    --shadow: 0px 0px 10px var(--scol);
-    --textshadow: -0px -0px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 0px 0px 0 #ccc;
+    --scol: rgba(45, 40, 62, 0.1);
+    --shadow: 3px 3px 10px var(--scol);
 }
 
 /* -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc; */
@@ -293,7 +292,7 @@ button:hover {
     min-height: 40px;
     background-color: var(--boxbg);
     margin-bottom: 40px;
-    border-radius: 5px;
+    border-radius: 4px;
     box-shadow: var(--shadow);
 }
 
@@ -320,8 +319,10 @@ button:hover {
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     text-align: left;
+    border-radius: 5px;
+    position: relative;
 }
 
 .projectBox h4 {
@@ -333,16 +334,68 @@ button:hover {
 .projectBox p{
     margin: 5px 10px;
     padding-bottom: 10px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .projectImage {
     min-height: 250px;
+    border-radius: 4px 4px 0px 0px;
 }
 
+.projectDescription {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;    
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: rgba(73, 73, 73, 0.8);
+    z-index: 0;
+    color: var(--white);
+}
+
+.projectDescription a {
+    color: var(--prim2);
+    text-decoration: none;
+}
+
+.projectLink1 {
+    width: 30%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: var(--boxbg);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+.projectLink2 {
+    width: 35%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: var(--boxbg);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+/*  Hover Effect */
+
+#pBox1:hover + #pBox1Desc {
+    display: flex;
+}
+
+#pBox1Desc:hover{
+    display: flex;
+}
 
 #pImg1 {
-    background: url('./img/project1.jpg') center no-repeat;
+    background: url('./img/shopAPPrentice.jpg') center no-repeat;
     background-size: cover;
+    position: relative;
+    top: 0;
 }
 
 #pImg2 {
@@ -422,6 +475,7 @@ button:hover {
     align-items: center;
     background-color: var(--boxbg);
     box-shadow: var(--shadow);
+    border-radius: 4px;
 }
 
 .expBox h4 {
@@ -458,6 +512,7 @@ button:hover {
     box-shadow: var(--shadow);
     padding: 10px;
     min-width: 140px;
+    border-radius: 4px;
 }
 
 .skillIcons {
@@ -1172,6 +1227,25 @@ button:hover {
 
     #eduArrowHead {
         top: -80px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #eduArrow1 {
+        top: -140px;
+    }
+
+    #eduArrowHead {
+        top: -150px;
+    }
+
+    #expArrowHead {
+        top: -130px;
+    }
+    
+    #expArrow1 {
+        height: 1500px;
+        top: -120px;
     }
 }
 
