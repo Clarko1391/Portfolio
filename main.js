@@ -25,6 +25,9 @@ const contactMe = document.getElementById('contactMe');
 const contactModal = document.getElementById('modalBG');
 const modalButton = document.getElementById('modalButton');
 const closeModalButton = document.getElementById('closeModal');
+const modalName = document.getElementById('modalName');
+const modalEmail = document.getElementById('modalEmail');
+const modalMessage = document.getElementById('modalMessage');
 
 // Gradient effect while sidebar at top of page
 const main = document.getElementById('main');
@@ -44,8 +47,8 @@ menuBtn.addEventListener('click', function () {navSlide()});
 recruitMe.addEventListener('click', function(){openModal()});
 contactMe.addEventListener('click', function(){openModal()});
 closeModalButton.addEventListener('click', function(){closeModal()});
+modalButton.addEventListener('click', function(){contactSubmit(Event)});
 window.addEventListener('scroll', function(){gradient()});
-
 
 // Check media query status for tablet & mobile screen sizes
 let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
@@ -121,6 +124,8 @@ function checkNavActive () {
     }
 }
 
+// Contact Modal Functions
+
 function openModal() {
     contactModal.style.visibility = 'visible';
     contactModal.style.opacity = 1;    
@@ -137,4 +142,16 @@ function gradient() {
         gradientBG.style.top = (-gPosition + "px");
     }
 }
+
+// Contact form validation and submission
+
+function contactSubmit() {
+    Event.preventDefault();
+    if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value < 5) {
+        alert('Please enter a valid email address and try again');
+    } else {
+        
+    }
+}
+
 

@@ -294,10 +294,12 @@
     <div id="modalBG">
         <div id="modal">
             <h2>Send me a message</h2>
-            <input class="modalInput" type="text" placeholder="Your name">
-            <input class="modalInput" type="text" placeholder="Your email">
-            <textarea class="modalInput" id="modalMessage" type="text" placeholder="What's up?"></textarea>
-            <button id="modalButton">Give me a shout!</button>
+            <form id="modalForm" action="mailto:__@gmail.com" method="post" enctype="text/plain">
+            <input class="modalInput" id="modalName" type="text" placeholder="Your name" required>
+            <input class="modalInput" id="modalEmail" type="text" placeholder="Your email" required>
+            <textarea class="modalInput" id="modalMessage" type="text" placeholder="What's up?" required></textarea>
+            <button type="submit" id="modalButton">Give me a shout!</button>
+            </form>
             <span id="closeModal">X</span>
         </div>
     </div>
