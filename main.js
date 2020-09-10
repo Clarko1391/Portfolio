@@ -146,7 +146,7 @@ function gradient() {
 // Contact form validation and submission
 
 function contactSubmit() {
-    Event.preventDefault();
+//     Event.preventDefault();
     if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value < 5) {
         alert('Please enter a valid email address and try again');
     } else {
