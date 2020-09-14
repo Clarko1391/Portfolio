@@ -1,30 +1,30 @@
 // Selectors
-// Nav Link Buttons
-const aboutMeBtn = document.getElementById('aboutMeButton');
+// Nav Link Buttons & event listeners
+document.getElementById('aboutMeButton').addEventListener('click', function() {smoothScroll(aboutMe, 1500)});
 const aboutMe = document.getElementById('aMHeader');
-const projectsBtn = document.getElementById('projectsButton');
+document.getElementById('projectsButton').addEventListener('click', function() {smoothScroll(projects, 1500)});
 const projects = document.getElementById('projectsHeader');
-const experienceBtn = document.getElementById('experienceButton');
+document.getElementById('experienceButton').addEventListener('click', function() {smoothScroll(experience, 1500)});
 const experience = document.getElementById('experienceHeader');
-const skillsBtn = document.getElementById('skillsButton');
+document.getElementById('skillsButton').addEventListener('click', function() {smoothScroll(skills, 1500)});
 const skills = document.getElementById('skillsHeader');
-const educationBtn = document.getElementById('educationButton');
+document.getElementById('educationButton').addEventListener('click', function() {smoothScroll(education, 1500)});
 const education = document.getElementById('educationHeader');
-const resumeBtn = document.getElementById('resumeButton');
+document.getElementById('resumeButton').addEventListener('click', function() {smoothScroll(resume, 1500)});
 const resume = document.getElementById('resumeHeader');
-const hobbiesBtn = document.getElementById('hobbiesButton');
+document.getElementById('hobbiesButton').addEventListener('click', function() {smoothScroll(hobbies, 1500)});
 const hobbies = document.getElementById('hobbiesHeader');
-const contactBtn = document.getElementById('contactButton');
+document.getElementById('contactButton').addEventListener('click', function() {smoothScroll(contact, 1500)});
 const contact = document.getElementById('contactHeader');
-const menuBtn = document.getElementById('menuIcon');
+document.getElementById('menuIcon').addEventListener('click', navSlide);
 const navLinks = document.getElementById('navLinks');
 
 // Contact Modal Elements
-const recruitMe = document.getElementById('recruitMe');
-const contactMe = document.getElementById('contactMe');
+document.getElementById('recruitMe').addEventListener('click', openModal);
+document.getElementById('contactMe').addEventListener('click', openModal);
 const contactModal = document.getElementById('modalBG');
-const modalButton = document.getElementById('modalButton');
-const closeModalButton = document.getElementById('closeModal');
+document.getElementById('modalButton').addEventListener('click', function(){contactSubmit(Event)});
+document.getElementById('closeModal').addEventListener('click', closeModal);
 const modalName = document.getElementById('modalName');
 const modalEmail = document.getElementById('modalEmail');
 const modalMessage = document.getElementById('modalMessage');
@@ -35,25 +35,12 @@ const showcase = document.getElementById('showcase');
 const gradientBG = document.getElementById('gradientBG');
 
 // Event Listeners
-aboutMeBtn.addEventListener('click', function() {smoothScroll(aboutMe, 1500)});
-projectsBtn.addEventListener('click', function() {smoothScroll(projects, 1500)});
-experienceBtn.addEventListener('click', function() {smoothScroll(experience, 1500)});
-skillsBtn.addEventListener('click', function() {smoothScroll(skills, 1500)});
-educationBtn.addEventListener('click', function() {smoothScroll(education, 1500)});
-resumeBtn.addEventListener('click', function() {smoothScroll(resume, 1500)});
-hobbiesBtn.addEventListener('click', function() {smoothScroll(hobbies, 1500)});
-contactBtn.addEventListener('click', function() {smoothScroll(contact, 1500)});
-menuBtn.addEventListener('click', function () {navSlide()});
-recruitMe.addEventListener('click', function(){openModal()});
-contactMe.addEventListener('click', function(){openModal()});
-closeModalButton.addEventListener('click', function(){closeModal()});
-modalButton.addEventListener('click', function(){contactSubmit(Event)});
-window.addEventListener('scroll', function(){gradient()});
+window.addEventListener('scroll', gradient);
 
 // Check media query status for tablet & mobile screen sizes
 let tablet = window.matchMedia("(min-width: 660px) and (max-width: 1024px)");
 let mobile = window.matchMedia("(max-width: 659px)");
-window.addEventListener('resize', function(){checkScreen()});
+window.addEventListener('resize', checkScreen);
 
 // Functions
 function smoothScroll(target, duration) {
