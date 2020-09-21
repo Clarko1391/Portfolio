@@ -699,10 +699,18 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
     z-index: 10;
     transition: all .5s ease;
+}
+
+.hideModal {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.showModal {
+    opacity: 1;
+    visibility: visible;
 }
 
 #modal {

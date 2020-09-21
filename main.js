@@ -114,13 +114,13 @@ function checkNavActive () {
 // Contact Modal Functions
 
 function openModal() {
-    contactModal.style.visibility = 'visible';
-    contactModal.style.opacity = 1;    
+    contactModal.classList.remove('hideModal');
+    contactModal.classList.add('showModal');   
 }
 
 function closeModal() {
-    contactModal.style.visibility = 'hidden';
-    contactModal.style.opacity = 0;   
+    contactModal.classList.remove('showModal');
+    contactModal.classList.add('hideModal'); 
 }
 
 function gradient() {
