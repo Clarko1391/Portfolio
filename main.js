@@ -123,6 +123,7 @@ function closeModal() {
     contactModal.classList.add('hideModal'); 
 }
 
+// Gradient function for tablet & mobile screen layouts
 function gradient() {
     let gPosition = document.documentElement.scrollTop;
     if (mobile.matches || tablet.matches) {
@@ -133,11 +134,13 @@ function gradient() {
 // Contact form validation and submission
 
 function contactSubmit() {
-//     Event.preventDefault();
-    if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value < 5) {
+    event.preventDefault();
+    if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value.length < 5) {
         alert('Please enter a valid email address and try again');
+    } else if (modalName.value.length < 2 || modalMessage.value.length < 3) {
+        alert('Please enter a valid name and message');
     } else {
-        
+        event.
     }
 }
 
