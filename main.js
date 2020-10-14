@@ -66,7 +66,7 @@ function smoothScroll(target, duration) {
 
     function animation(currentTime) {
         if(startTime === null) 
-            startTime  = currentTime;
+            startTime = currentTime;
         let timeElapsed = currentTime - startTime;
         let run = ease(timeElapsed, startPosition, targetPosition, duration);
         window.scrollTo(0, run);
@@ -134,13 +134,12 @@ function gradient() {
 // Contact form validation and submission
 
 function contactSubmit() {
-    event.preventDefault();
     if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value.length < 5) {
+        event.preventDefault();
         alert('Please enter a valid email address and try again');
     } else if (modalName.value.length < 2 || modalMessage.value.length < 3) {
+        event.preventDefault();
         alert('Please enter a valid name and message');
-    } else {
-        event.
     }
 }
 
