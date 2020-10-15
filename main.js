@@ -23,7 +23,7 @@ const navLinks = document.getElementById('navLinks');
 document.getElementById('recruitMe').addEventListener('click', openModal);
 document.getElementById('contactMe').addEventListener('click', openModal);
 const contactModal = document.getElementById('modalBG');
-document.getElementById('modalButton').addEventListener('click', function(){contactSubmit(Event)});
+// document.getElementById('modalButton').addEventListener('click', function(){contactSubmit(event)});
 document.getElementById('closeModal').addEventListener('click', closeModal);
 const modalName = document.getElementById('modalName');
 const modalEmail = document.getElementById('modalEmail');
@@ -133,14 +133,14 @@ function gradient() {
 
 // Contact form validation and submission
 
-function contactSubmit() {
-    if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value.length < 5) {
-        event.preventDefault();
-        alert('Please enter a valid email address and try again');
-    } else if (modalName.value.length < 2 || modalMessage.value.length < 3) {
-        event.preventDefault();
-        alert('Please enter a valid name and message');
-    }
-}
+// function contactSubmit(event) {
+//    if (!modalEmail.value.contains('@') || !modalEmail.value.contains('.') || modalEmail.value.length < 5) {
+//        event.preventDefault();
+//        alert('Please enter a valid email address and try again');
+//    } else if (modalName.value.length < 2 || modalMessage.value.length < 3) {
+//        event.preventDefault();
+//        alert('Please enter a valid name and message');
+//    }
+// }
 
 
