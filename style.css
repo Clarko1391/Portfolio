@@ -220,7 +220,7 @@ button:hover {
     min-height: 400px;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.png);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -977,7 +977,7 @@ button:hover {
     .bgImage {
         height: 85vh;
         left: 0;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.png);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
         background-position: left;
     }
     
@@ -1195,7 +1195,7 @@ button:hover {
     .bgImage {
         left: 0;
         height: 85vh;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.png);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
         background-position: left;
     }
 
