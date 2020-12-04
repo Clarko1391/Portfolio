@@ -363,53 +363,56 @@ button:hover {
     text-decoration: none;
 }
 
-.projectLink1 {
+
+.projectLink {
     width: fit-content;
     padding: 10px;
     text-align: center;
     background-color: var(--boxbg);
     border-radius: 4px;
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
 
-.projectLink2 {
-    width: fit-content;
-    padding: 10px;
-    text-align: center;
-    background-color: var(--boxbg);
-    border-radius: 4px;
-    box-shadow: var(--shadow);
+.projectLink:hover{
+    background-color: var(--buttontext);
+    color: white;
 }
 
 /*  Hover Effect */
 
-#pBox1:hover + #pBox1Desc {
+#pBox:hover + #pBoxDesc {
     display: flex;
 }
 
-#pBox1Desc:hover{
+#pBoxDesc:hover{
     display: flex;
+}
+
+.pBoxButtonOverflow {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 #pImg1 {
     background: url('./img/shopAPPrentice.jpg') center no-repeat;
     background-size: cover;
-    position: relative;
-    top: 0;
 }
 
 #pImg2 {
-    background: url('./img/project2.jpg') center no-repeat;
+    background: url('./img/reactreduxshopAPPrentice.png') top no-repeat;
     background-size: cover;
 }
 
 #pImg3 {
-    background: url('./img/project3.jpg') center no-repeat;
+    background: url('./img/eetResourceSite.png') top no-repeat;
     background-size: cover;
 }
 
 #pImg4 {
-    background: url('./img/project4.jpg') center no-repeat;
+    background: url('./img/learningToCode.jpg') center no-repeat;
     background-size: cover;
 }
 
