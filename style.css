@@ -37,9 +37,15 @@ button {
     color: var(--buttontext);
     font-size: 1em;
     border: 0px;
+    cursor: pointer;
 }
 
-:focus {
+button:hover {
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+button:focus {
     outline: none;
 }
 
@@ -63,7 +69,7 @@ h3 {
     color: var(--pinktext);
 }
 
- strong {
+strong {
      color: var(--pinktext);
 }
 
@@ -152,12 +158,12 @@ b {
     justify-content: space-evenly;
 }
 
-#menu #menuIcon {
-    display: none;
+#menu {
+    visibility: hidden;
 }
 
 .link {
-    width: 150px;
+    /* width: 150px; */
     height: 30px;
     padding: 2px 0px;
     text-align: center;
@@ -165,12 +171,6 @@ b {
 
 .link:focus {
     color: var(--pinktext);
-}
-
-button:hover {
-    transform: translateX(10px);
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 #bottomContainer p {
@@ -188,7 +188,7 @@ button:hover {
 #gradientBG {
     position: absolute;
     top: 0;
-    left: 100%; 
+    left: 100%;
     display: none;
 }
 
@@ -200,7 +200,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-        
+
 }
 
 #showcase {
@@ -347,7 +347,7 @@ button:hover {
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;    
+    left: 0;
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -433,9 +433,9 @@ button:hover {
 
 /* Experience */
 
-.timelineBox { 
+.timelineBox {
     width: 100%;
-    margin: 40px 0px; 
+    margin: 40px 0px;
     height: fit-content;
     overflow-y: hidden;
     padding: 40px 20px 20px;
@@ -680,7 +680,7 @@ button:hover {
 .hobbyImage:hover {
     transition: ease all 0.3s;
     transform: scale(1.1);
-    
+
 }
 
 #fm1 {
@@ -742,6 +742,11 @@ button:hover {
     background-color: var(--prim1);
     padding: 5px 0px;
     border-radius: 10px;
+}
+
+#contactMe:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 /* Contact Modal */
@@ -842,7 +847,7 @@ button:hover {
 /* Tablet Size Responsiveness */
 
 @media(min-width: 660px) and (max-width: 1024px) {
-       
+
     #sidebar {
         width: 100vw;
         height: 150px;
@@ -850,18 +855,22 @@ button:hover {
         top: 0;
         left: 0;
         z-index: 4;
-    } 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     #topContainer {
-        height: 150px;
-        width: 100%;
+        height: 140px;
+        width: 90%;
         display: grid;
-        grid-template-areas: 
-        "portrait portrait intro intro intro intro"
-        "navLinks navLinks navLinks navLinks navLinks navIcons";
+        /* grid-template-columns: 80px, auto, auto, auto, 80px; */
+        /* grid-template-rows: 80px, 60px; */
+        grid-template-areas:
+        "portrait intro intro intro intro"
+        "navLinks navLinks navLinks navLinks navIcons";
         box-sizing: border-box;
-        gap: 0px;
-        padding: 10px;
         margin: 0px;
     }
 
@@ -876,6 +885,7 @@ button:hover {
 
     #intro {
         grid-area: intro;
+        padding-left: 10%;
         text-align: left;
     }
 
@@ -897,8 +907,6 @@ button:hover {
 
     #navIcons {
         grid-area: navIcons;
-        width: 80px;
-        margin: 0px 15px;
     }
 
     .navBox {
@@ -913,21 +921,18 @@ button:hover {
 
     #navLinks {
         height: 30px;
-        width: auto;
+        width: fit-content;
         grid-area: navLinks;
     }
 
     .link {
-        width: auto;
-        height: 30px;
-        padding: 2px 0px;
+        /* padding: 2px 0px; */
         margin: 0px 5px;
-        font-size: 1.7vw;
-        text-align: center;
+        font-size: 1.5vw;
     }
 
     button:hover {
-        transform: translateX(3px);        
+        transform: translateX(3px);
     }
 
     #navLinks ul {
@@ -939,7 +944,7 @@ button:hover {
     #bottomContainer {
         display: none;
     }
-    
+
     #main {
         grid-template-columns: auto 0px;
         grid-template-rows: 150px auto;
@@ -947,7 +952,7 @@ button:hover {
         top: 0;
         left: 0;
     }
-    
+
     .window {
         height: 100%;
         width: 100%;
@@ -976,7 +981,7 @@ button:hover {
         height: 8000px;
         position: absolute;
         top: 0px;
-        left: 0px; 
+        left: 0px;
         display: initial;
     }
 
@@ -987,9 +992,9 @@ button:hover {
     .wrapper {
         position: relative;
         grid-column-start: 1;
-        grid-row-start: 2; 
+        grid-row-start: 2;
         top: 0;
-        left: 0;      
+        left: 0;
     }
 
     #showcase {
@@ -1002,7 +1007,7 @@ button:hover {
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
         background-position: left;
     }
-    
+
     #showcase h1{
      z-index: -1;
     }
@@ -1040,7 +1045,7 @@ button:hover {
 
 @media screen and (max-width: 659px) {
 
-/* Skill Boxes Responsiveness on Mobile */        
+/* Skill Boxes Responsiveness on Mobile */
     #skill {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1052,25 +1057,28 @@ button:hover {
         top: 0;
         left: 0;
         z-index: 4;
-    } 
-
-    #topContainer {
-        height: 100px;
-        width: 100%;
-        display: grid;
-        grid-template-areas: 
-        "portrait intro intro intro intro"
-        "navIcons navIcons blank1 blank2 blank3";
-        box-sizing: border-box;
-        gap: 0px;
-        padding: 10px 20px;
-        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
+    #topContainer {
+        height: 90%;
+        width: 90%;
+        display: grid;
+        grid-template-areas:
+        "portrait intro intro intro"
+        "menu blank-bottom blank-bottom navIcons";
+        box-sizing: border-box;
+        gap: 0px;
+    }
+
+    
     #portraitBox {
         grid-area: portrait;
-        width: 55px;
         margin: 0px;
+        width: fit-content;
     }
 
     #portrait {
@@ -1085,54 +1093,56 @@ button:hover {
     }
 
     #intro strong {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
-    
+
     #intro p {
-        font-size: 2.25vw;
-        line-height: 1.2;
+        font-size: 2vw;
     }
-    
+
     .largeScreen {
         display: none;
     }
-    
+
     .smallScreen {
         display: inline-block;
     }
 
     #navIcons {
         grid-area: navIcons;
-        width: 80px;
-        margin: 0px 15px;
+        width: fit-content;
+        margin: 0px;
     }
-    
+
     .navBox {
         padding: 0px;
         margin: 0px 10px;
     }
-    
+
     .navIcon {
         height: 20px;
         width: 20px;
     }
 
-    #menu #menuIcon {
-        display: inline-block;
-        margin: 0px 10px;
+    #menu {
+        grid-area: menu;
+        visibility: visible;
+        width: 30px;
+        height: 25px;
     }
 
     /*  */
-    
+
     #navLinks {
         position: absolute;
         top: -1000px;
         left: 0px;
-        width: 25vw;
+        width: 20vw;
         height: 50vh;
-        background-color: #2d283e;
+        background-color: rgba(45, 40, 62, 0.95);
         margin: 0;
         transition: all 1s ease;
+        text-align: left;
     }
 
     #navLinks ul {
@@ -1142,11 +1152,16 @@ button:hover {
 
     /*  */
 
-    .link, button {
+    .link {
         text-align: left;
         font-size: 2vw;
         padding-left: 10px;
-    }    
+    }
+
+    button {
+        text-align: center;
+        font-size: 1em;
+    }
 
     #bottomContainer {
         display: none;
@@ -1159,7 +1174,7 @@ button:hover {
         top: 0;
         left: 0;
     }
-    
+
     .window {
         height: 100%;
         width: 100%;
@@ -1169,7 +1184,7 @@ button:hover {
         grid-row-start: 1;
         grid-column-start: 1;
         }
-    
+
     #sbBG {
         height: 105px;
         width: 101%;
@@ -1189,20 +1204,20 @@ button:hover {
         width: auto;
         position: relative;
         top: 0px;
-        left: 0px; 
-        display: initial;    
+        left: 0px;
+        display: initial;
     }
 
     #sbBG::-webkit-scrollbar{
         display: none;
     }
-    
+
     .wrapper {
         position: relative;
         grid-column-start: 1;
-        grid-row-start: 2; 
+        grid-row-start: 2;
         top: 150;
-        left: 0;       
+        left: 0;
     }
 
     #showcase {
@@ -1224,11 +1239,11 @@ button:hover {
         display: none;
     }
 
-    .timelineBox { 
+    .timelineBox {
         margin: 40px 0px;
-        height: fit-content; 
+        height: fit-content;
     }
-    
+
     .arrow {
         position: relative;
         padding-right: 10px;
@@ -1237,26 +1252,26 @@ button:hover {
     #expArrowHead {
         top: -110px;
     }
-    
+
     #expArrow1 {
         height: 1200px;
         top: -100px;
     }
-    
+
     #expArrow2 {
         height: 1000px;
         top: -330px;
     }
-    
+
     .expWrapper {
         height: fit-content;
     }
-   
+
     #eduArrow1 {
         height: 350px;
         top: -100px;
     }
-    
+
     #eduArrow2 {
         height: 450px;
         top: -165px;
@@ -1268,7 +1283,7 @@ button:hover {
 
     .eduWrapper {
         height: fit-content;
-    }  
+    }
 
     #fMHeader {
         display: initial;
@@ -1320,7 +1335,7 @@ button:hover {
     #expArrowHead {
         top: -130px;
     }
-    
+
     #expArrow1 {
         height: 1500px;
         top: -120px;
