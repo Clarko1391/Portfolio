@@ -50,7 +50,6 @@ function smoothScroll(target, duration) {
     let startPosition = window.pageYOffset;
     let startTime = null;
     checkNavActive();
-    console.log(targetPosition);
 
     function checkMedia(position) {
         // Adding offset for responsiveness queries (sidebar is 150px tall in tablet, 100px tall in mobile)

@@ -287,9 +287,8 @@ button:hover {
 
 #recruitMe {
     color: var(--black);
-    width: 80%;
-    max-width: 350px;
-    min-height: 40px;
+    width: 250px;
+    height: 40px;
     background-color: var(--boxbg);
     margin-bottom: 40px;
     border-radius: 4px;
@@ -365,7 +364,17 @@ button:hover {
 
 
 .projectLink {
-    width: fit-content;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--boxbg);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.projectLink-small {
+    width: 125px;
     padding: 10px;
     text-align: center;
     background-color: var(--boxbg);
@@ -379,13 +388,18 @@ button:hover {
     color: white;
 }
 
+.projectLink-small:hover{
+    background-color: var(--buttontext);
+    color: white;
+}
+
 /*  Hover Effect */
 
-#pBox:hover + #pBoxDesc {
+#pBox:hover + #pBoxDesc, #pBox:active + #pBoxDesc {
     display: flex;
 }
 
-#pBoxDesc:hover{
+#pBoxDesc:hover, #pBoxDesc:active{
     display: flex;
 }
 
@@ -722,7 +736,8 @@ button:hover {
 }
 
 #contactMe {
-    width: 30%;
+    width: 250px;
+    height: 40px;
     background-color: var(--prim1);
     padding: 5px 0px;
     border-radius: 10px;
@@ -756,14 +771,14 @@ button:hover {
 
 #modal {
     position: relative;
-    height: 40vh;
+    height: 50vh;
     width: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: var(--prim1);
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 #modalForm {
@@ -774,10 +789,11 @@ button:hover {
     justify-content: space-around;
     align-items: center;
     background-color: var(--prim1);
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 #modal h2 {
+    font-size: 1.5em;
     width: 80%;
     text-align: left;
     color: var(--pinktext);
@@ -788,19 +804,21 @@ button:hover {
     width: 80%;
     height: 10%;
     text-align: center;
+    font-size: 1em;
     border-radius: 5px;
     border: none;
 }
 
 #modalMessage {
-    height: 25%;
+    height: fit-content;
+    font-size: 1em;
 }
 
 #modalButton {
-    height: 10%;
+    height: 40px;
+    width: 250px;
     background-color: var(--prim2);
-    width: 40%;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 #modalButton:hover {
@@ -810,10 +828,10 @@ button:hover {
 
 #closeModal {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 25px;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 2em;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -1127,12 +1145,7 @@ button:hover {
         text-align: left;
         font-size: 2vw;
         padding-left: 10px;
-    }
-
-    #recruitMe {
-        text-align: center;
-    }
-    
+    }    
 
     #bottomContainer {
         display: none;
