@@ -210,11 +210,12 @@ b {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .bgImage {
     position: absolute;
-    left: 300px;
+    left: 0px;
     top: 0px;
     min-width: 400px;
     min-height: 400px;
@@ -222,7 +223,6 @@ b {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     opacity: 0.95;
 }
@@ -282,7 +282,7 @@ b {
 
 .sectionWrapper h3{
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 #recruitMe {
@@ -340,6 +340,17 @@ b {
 .projectImage {
     min-height: 250px;
     border-radius: 4px 4px 0px 0px;
+}
+
+.projectTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectInfoTag {
+    width: 16px;
+    height: 16px;
+    padding: 10px 10px 5px 5px;
 }
 
 .projectDescription {
@@ -535,9 +546,9 @@ b {
 
 .skillIcons {
     width: 100%;
+    padding-top: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -550,6 +561,11 @@ b {
 .skillTitle {
     font-size: 1.2em;
     color: var(--pinktext);
+    text-align: center;
+}
+
+.skillContent {
+    text-align: center;
 }
 
 /* Education */
@@ -824,14 +840,13 @@ b {
 
 #modalButton {
     height: 40px;
-    width: 250px;
+    width: 100%;
     background-color: var(--prim2);
-    border-radius: 4px;
 }
 
 #modalButton:hover {
     transform: translateX(0px);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 #closeModal {
@@ -1005,9 +1020,9 @@ b {
 
     .bgImage {
         height: 85vh;
-        left: 0;
+        width: 150%;
+        left: -300px;
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
-        background-position: left;
     }
 
     #showcase h1{
@@ -1227,7 +1242,8 @@ b {
     }
 
     .bgImage {
-        left: 0;
+        left: -300px;
+        width: 150%;
         height: 85vh;
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url(img/showcase.jpg);
         background-position: left;
