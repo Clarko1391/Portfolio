@@ -211,6 +211,7 @@ b {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 .bgImage {
